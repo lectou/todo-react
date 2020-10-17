@@ -12,6 +12,10 @@ function App() {
       text: 'Разработать ToDo на ReactJS',
       completed: false,
     },
+    {
+      text: 'redux',
+      completed: false,
+    },
   ]);
 
   const onToggleCompleted = (index) => {
@@ -19,9 +23,9 @@ function App() {
       prevTasks.map((task, curIdx) =>
         index === curIdx
           ? {
-              ...task,
-              completed: !task.completed,
-            }
+            ...task,
+            completed: !task.completed,
+          }
           : task,
       ),
     );
